@@ -125,7 +125,7 @@ setInterval(() => {
 </script>
 
 <template>
-  <main class="min-h-screen px-4 pb-16">
+  <main class="min-h-screen px-4 pb-4">
     <header class="max-w-xl mx-auto pt-10 pb-6 text-center">
       <h1 class="text-2xl font-bold text-rose-700 tracking-tight">ミルク記録</h1>
       <p class="mt-1 text-sm text-slate-600">一日の摂取量をかんたん管理（オフライン・ログイン不要）</p>
@@ -160,7 +160,7 @@ setInterval(() => {
           <button class="btn-primary mt-3 bg-rose-500 text-white" @click="addEntry">追加する</button>
         </div>
         <div>
-          <label class="label">当日の摂取量合計 (ml) — 手入力可</label>
+          <label class="label">当日の摂取量合計 (ml)</label>
           <div class="flex gap-2">
             <input class="input" type="number" inputmode="numeric" min="0" step="10" v-model.number="manualTotal"
               placeholder="自動計算 or 手入力" />
@@ -193,6 +193,10 @@ setInterval(() => {
 
     <footer class="max-w-xl mx-auto text-center text-xs text-slate-500 mt-6">
       <p>データはお使いの端末の <span class="font-medium">LocalStorage</span> に保存されます。ブラウザを変えるとデータは引き継がれません。</p>
+      <footer class="mt-2 py-6 border-t text-center text-sm text-gray-500">
+        <a href="/about.html" class="mx-3 hover:text-orange-500">About</a>
+        <a href="/privacy.html" class="mx-3 hover:text-orange-500">Privacy Policy</a>
+      </footer>
     </footer>
   </main>
 </template>
