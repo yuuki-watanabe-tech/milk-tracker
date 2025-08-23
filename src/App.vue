@@ -155,9 +155,11 @@ setInterval(() => {
       <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <label class="label">今回の摂取量 (ml)</label>
-          <input class="input" type="number" inputmode="numeric" min="0" step="10" v-model.number="amountNow"
-            placeholder="例: 120" />
-          <button class="btn-primary mt-3 bg-rose-500 text-white" @click="addEntry">追加する</button>
+          <div class="flex gap-2">
+            <input class="input" type="number" inputmode="numeric" min="0" step="10" v-model.number="amountNow"
+              placeholder="例: 120" />
+            <button class="btn-primary bg-rose-500 text-white" @click="addEntry">追加する</button>
+          </div>
         </div>
         <div>
           <label class="label">当日の摂取量合計 (ml)</label>
